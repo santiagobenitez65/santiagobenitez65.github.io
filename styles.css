@@ -162,7 +162,16 @@ img.hobbie{
 }
 
 @media(max-width: 480px) {
-    section {
+    section, h1 {
         transform: scale(0.90);
     }
+
+    section:hover {
+        transform: scale(0.85);
+    }
+
+    footer {
+        font-size: 80%;
+    }
+        
 }
