@@ -1,80 +1,87 @@
-/*HACER ÍNDICE*/
-/*¿PLANES A FURUTO? ¿HABILIDADES?*/
-
-body{
+body {
     background-image: url(Imagenes/fondo.jpeg);
     background-repeat: no-repeat;
     background-size: auto 100%;
     margin: 0;
 }
 
-*{
+* {
     border-radius: 10px;
 }
 
-#indice{
+#indice {
     background-color: rgba(80, 78, 55, 0.8);
 }
 
-#index{
+#index {
     background-color: rgb(65, 63, 44);
     padding-top: 5px;
 }
 
-h1, section{
+h1,
+section {
     margin: auto;
-    width: 400px;
+    width: 20dvw;
+    min-height: fit-content;
     background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0 0 10px black;
     padding: 15px
-    
 }
 
-h1{
+h1 {
     margin-top: 20px;
     text-align: center;
     font-size: 300%;
 
 }
 
-section{
+.container {
+    height: fit-content;
+}
+
+/*Limpia el float para que la imagen no se salga del contenedor*/
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+section {
     margin-top: 20px;
-    transition: all;
+    transition: transform;
     transition-duration: 1s;
 }
 
-img{ 
+img {
     width: 200px;
 }
 
-p{
+p {
     font-size: 135%
 }
 
-.izq{
+.izq {
     float: left;
     margin-right: 20px;
 }
 
-.der{
+.der {
     float: right;
     margin-left: 20px;
 
 }
 
-section:hover{
+section:hover {
     transform: scale(1.03);
 }
 
-#estudios{
-    height: 250px;
-}
-
-#mascotas{
-    height: 765px;
-}
-
-h2, h3{
+h2,
+h3 {
     background-color: rgba(255, 255, 255, 0.6);
     margin-bottom: 50px;
     text-align: center;
@@ -82,47 +89,49 @@ h2, h3{
 }
 
 h2 {
-    width: 225px;
+    width: 60%;
     margin: auto;
     font-size: 185%;
 }
 
-h3{
+h3 {
     width: 100px;
     margin-top: 25px;
     margin-bottom: 25px;
     font-size: 155%;
 }
 
-table, th, td{
+table,
+th,
+td {
     border: 2px solid;
     border-collapse: collapse;
 
 }
 
-table{
+table {
     background-color: rgba(255, 255, 255, 0.5);
     margin: auto;
     margin-top: 50px;
     transform: scale(1.2);
 }
 
-th{
+th {
     color: white;
     border-color: black;
     background-color: rgb(0, 25, 109);
     border-radius: 0;
 }
 
-td{
+td {
     text-align: center;
 }
 
-#h3gata{
+#h3gata {
     margin-top: 35px;
 }
 
-footer{
+footer {
     background-color: rgb(80, 78, 55);
     height: 80px;
     margin-top: 20px;
@@ -131,47 +140,94 @@ footer{
     font-weight: bold;
 }
 
-address{
+address {
     text-align: center;
 }
 
-a{
+a {
     text-decoration: none;
     color: rgb(168, 164, 130);
 }
 
-a:hover{
+a:hover {
     text-decoration: underline;
 }
 
-li{
+ol {
+    margin: auto;
+    width: fit-content;
+}
+
+
+li {
+    margin: auto;
+    width: fit-content;
     font-size: x-large;
 }
 
-li.hobbie{
-    margin-left: 85px;
-    margin-top: 50px;
+li.habilidad,
+li.nav {
+    margin-left: 0;
+
 }
 
-li.habilidad{
-    margin-left: 75px;
+img.hobbie {
+    margin-left: calc(50% - 100px);
+    margin-bottom: 5%;
 }
 
-img.hobbie{
-    margin-left: 55px;
-}
+@media(max-width: 1900px) {
 
-@media(max-width: 480px) {
-    section, h1 {
-        transform: scale(0.90);
-    }
-
-    section:hover {
-        transform: scale(0.85);
+    section,
+    h1 {
+        width: 50dvw;
     }
 
     footer {
         font-size: 80%;
     }
-        
+
+    table {
+        transform: scale(1);
+    }
+}
+
+@media(max-width: 550px) {
+
+    section,
+    h1 {
+        width: 80dvw;
+    }
+
+    img {
+        width: 40vw
+    }
+
+    img.hobbie {
+        margin-left: calc(50% - 40vw / 2);
+    }
+
+    table {
+        transform: scale(0.9);
+        margin-inline: 0;
+    }
+}
+
+@media(max-width: 312px) {
+    section {
+        padding: 5px;
+    }
+
+    ol>li {
+        font-size: 150%;
+    }
+
+    body {
+        font-size: 60%;
+    }
+
+    footer {
+        font-size: 50%;
+    }
+
 }
